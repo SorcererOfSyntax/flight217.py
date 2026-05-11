@@ -1,0 +1,424 @@
+import time
+
+def slow_print(text, delay=0.05):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def print_menu():
+    print("\n" * 2)  # Add some space
+    print("=" * 34)
+    print("      FLIGHT 217 : HIJACKED")
+    print("=" * 34)
+    print('      "Every choice costs."')
+    print("-" * 34)
+    print("[1] Start Game")
+    print("[2] How To Play")
+    print("[3] Exit")
+    print("-" * 34)
+
+def how_to_play():
+    print("\n" * 2)
+    print("=" * 40)
+    print("             HOW TO PLAY")
+    print("=" * 40)
+    print("- Your choices affect morality.")
+    time.sleep(0.5)
+    print("- Saving one person may sacrifice another.")
+    time.sleep(0.5)
+    print("- Terrorists react to your actions.")
+    time.sleep(0.5)
+    print("- No decision is completely right.")
+    print("-" * 40)
+    input("\nPress Enter to return to main menu...")
+
+# MAIN PROGRAM
+print("Connecting to flight systems...", end="", flush=True)
+time.sleep(0.5)
+print(" 🔗", flush=True)
+time.sleep(0.3)
+
+print("Loading passenger manifest...", end="", flush=True)
+time.sleep(0.5)
+print(" ✅", flush=True)
+time.sleep(0.3)
+print("Encrypting communication channels...", end="", flush=True)
+time.sleep(0.5)
+print(" 🔒", flush=True)
+time.sleep(1)
+
+while True:
+    print_menu()
+    
+    choice = input("\nEnter your choice: ")
+    
+    if choice == "1":
+        slow_print("\n[SYSTEM] Flight 217 protocols engaged...")
+        time.sleep(0.5)
+        slow_print("[SYSTEM] The cockpit door is unlocked.")
+        time.sleep(0.5)
+        # Here you'll put your actual game code
+        break
+        
+    elif choice == "2":
+        how_to_play()
+        
+    elif choice == "3":
+        slow_print("\n[SYSTEM] Disconnecting from flight systems...")
+        time.sleep(0.5)
+        print("Goodbye.")
+        break
+        
+    else:
+        slow_print("\n[ERROR] Invalid choice. Try again.", 0.07)
+        time.sleep(1)
+        
+        import time
+
+def slow_print(text, delay=0.05):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def talk_choice(sabrina_emotion):
+    print("\n" + "-" * 40)
+    print("What do you say to Sabrina?")
+    print("[1] 'I'm so excited for our future together.'")
+    print("[2] 'Are you feeling okay? You look beautiful today.'")
+    print("[3] 'I can't wait to meet this little one.'")
+    print("-" * 40)
+    
+    choice = input("Your choice: ")
+    
+    if choice == "1":
+        slow_print("\nSabrina: 'Me too, Jake. I've never been this happy.'")
+        slow_print("She squeezes your hand and smiles warmly.")
+        sabrina_emotion += 15
+    elif choice == "2":
+        slow_print("\nSabrina: 'A little nauseous, but you saying that makes it better.'")
+        slow_print("She blushes and leans her head on your shoulder.")
+        sabrina_emotion += 10
+    elif choice == "3":
+        slow_print("\nSabrina: 'I've been dreaming about them every night.'")
+        slow_print("She places her hand on her belly, eyes glowing.")
+        sabrina_emotion += 20
+    else:
+        slow_print("\nYou stammer awkwardly...")
+        slow_print("Sabrina laughs: 'It's okay, I know what you meant.'")
+        sabrina_emotion += 5
+    
+    return sabrina_emotion
+
+def start_game():
+    sabrina_emotion = 50  # Starting happiness level
+    
+    print("\n" * 2)
+    slow_print("=" * 50)
+    slow_print("         FLIGHT 217 : BOARDING COMPLETE")
+    slow_print("=" * 50)
+    time.sleep(1)
+    
+    slow_print("\n[Seat 14A - 14B]")
+    time.sleep(0.5)
+    slow_print("You are JAKE, 34, returning home with your wife SABRINA.")
+    time.sleep(0.5)
+    slow_print("The first class cabin is quiet. Sunlight pours through the window.")
+    time.sleep(0.5)
+    slow_print("Sabrina rests her hand on her slightly rounded belly.")
+    time.sleep(1)
+    
+    # Conversation 1
+    slow_print("\n--- 30,000 feet above the Atlantic ---")
+    sabrina_emotion = talk_choice(sabrina_emotion)
+    time.sleep(1)
+    
+    # Conversation 2
+    slow_print("\nThe flight attendant offers champagne. Sabrina declines gently.")
+    sabrina_emotion = talk_choice(sabrina_emotion)
+    time.sleep(1)
+    
+    # Conversation 3
+    slow_print("\nTurbulence shakes the plane. Sabrina grips your arm.")
+    sabrina_emotion = talk_choice(sabrina_emotion)
+    time.sleep(1)
+    
+    # Conversation 4
+    slow_print("\nSabrina whispers: 'What should we name them?'")
+    sabrina_emotion = talk_choice(sabrina_emotion)
+    time.sleep(1.5)
+    
+    # Emotion check
+    print("\n" + "-" * 40)
+    if sabrina_emotion >= 70:
+        slow_print("❤️ Sabrina is glowing. She kisses your cheek. 'I love you, Jake.'")
+    elif sabrina_emotion >= 50:
+        slow_print("💛 Sabrina is content. She holds your hand in comfortable silence.")
+    else:
+        slow_print("💔 Sabrina seems distant. She stares out the window quietly.")
+    time.sleep(2)
+    
+    # HIJACKING SCENE
+    print("\n" + "=" * 50)
+    slow_print("/// PASSENGER COUNT: 160 /// CREW: 6 /// TERRORISTS: 20 ///")
+    print("=" * 50)
+    time.sleep(1)
+    
+    slow_print("\n[COCKPIT - 2:14 PM]")
+    time.sleep(0.5)
+    slow_print("A loud crash echoes from the front of the plane.")
+    time.sleep(0.5)
+    slow_print("Screaming. Glass breaking.")
+    time.sleep(0.5)
+    slow_print("A man's voice over the intercom, thick with an accent:")
+    time.sleep(0.5)
+    slow_print("\n💀 'This is Captain now. Nobody move. Nobody speak. 20 of us. 160 of you.'")
+    time.sleep(0.5)
+    slow_print("💀 'One hero? Someone dies. One prayer? Someone dies. Sit. Quiet.'")
+    time.sleep(1)
+    
+    slow_print("\nSabrina freezes. Her fingernails dig into your arm.")
+    slow_print("Her eyes are wide, terrified. 'Jake... the baby...'")
+    time.sleep(1.5)
+    
+    print("\n" + "!" * 50)
+    slow_print("              TERRORISTS HAVE CONTROL")
+    print("!" * 50)
+    time.sleep(1)
+    
+    # Game continues - choices will affect survival
+    return sabrina_emotion
+
+# MAIN EXECUTION (for testing)
+if __name__ == "__main__":
+    # Simulate menu choice 1
+    start_game()
+    
+    import time
+import random
+
+def slow_print(text, delay=0.05):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+# Game stats
+morality = 50
+honor = 50
+wife_alive = True
+terror_alert = 0
+
+choices = {
+    "1": "Attack",
+    "2": "Negotiate", 
+    "3": "Hide"
+}
+
+def show_stats():
+    print("\n" + "-" * 40)
+    print(f"🧠 Morality: {morality}  |  ⚔️ Honor: {honor}  |  ⚠️ Terror Alert: {terror_alert}")
+    if wife_alive:
+        print("💗 Sabrina: ALIVE")
+    else:
+        print("💔 Sabrina: DECEASED")
+    print("-" * 40)
+
+def hijack_sequence(sabrina_emotion):
+    global morality, honor, wife_alive, terror_alert
+    
+    slow_print("\n[FLIGHT 217 - 20 MINUTES AFTER HIJACK]")
+    time.sleep(1)
+    slow_print("Two terrorists with AK-47s walk down the aisle.")
+    slow_print("They're checking passports. Looking for military or police.")
+    time.sleep(1)
+    
+    slow_print("\nOne stops at your row. 'You. Stand up.'")
+    time.sleep(0.5)
+    slow_print("Sabrina whimpers softly.")
+    
+    # First major choice
+    while True:
+        print("\n" + "=" * 40)
+        print("What do you do?")
+        print("[1] ATTACK the terrorist (Save Sabrina now)")
+        print("[2] NEGOTIATE (Use words to protect her)")
+        print("[3] HIDE (Pretend to be asleep, hope they leave)")
+        print("=" * 40)
+        
+        choice = input("Your choice: ")
+        
+        if choice == "1":  # ATTACK
+            slow_print("\nYou lunge forward, grabbing the terrorist's gun.")
+            time.sleep(0.5)
+            slow_print("The weapon fires wildly into the ceiling.")
+            time.sleep(0.5)
+            slow_print("Three other terrorists rush toward you.")
+            time.sleep(0.5)
+            slow_print("You manage to kill one... but bullets tear through the cabin.")
+            
+            terror_alert += 40
+            morality -= 20
+            
+            if random.random() > 0.3:  # 70% chance
+                slow_print("\n💀 A stray bullet hits Sabrina's chest.")
+                slow_print("She gasps your name and goes silent.")
+                wife_alive = False
+                slow_print("\n[SYSTEM] Sabrina is gone. You hold her body as chaos erupts.")
+            else:
+                slow_print("\nYou shield Sabrina with your body. You take a bullet in the arm.")
+                slow_print("She screams but survives. Blood drips down your sleeve.")
+                wife_alive = True
+                morality -= 10
+            break
+            
+        elif choice == "2":  # NEGOTIATE
+            slow_print("\nYou raise your hands slowly. 'Please. She's pregnant. Just let her go.'")
+            time.sleep(0.5)
+            slow_print("The terrorist looks at Sabrina's belly. Then at you.")
+            time.sleep(0.5)
+            
+            if morality >= 40:
+                slow_print("Terrorist: 'Fine. She moves to back. You stay.'")
+                slow_print("They pull Sabrina away. She cries out for you.")
+                wife_alive = True
+                terror_alert += 10
+                morality += 10
+                honor += 15
+            else:
+                slow_print("Terrorist: 'Lies. Both of you stay. Shut up.'")
+                slow_print("He hits you with the rifle butt. Sabrina screams.")
+                wife_alive = True
+                terror_alert += 5
+                morality -= 5
+            break
+            
+        elif choice == "3":  # HIDE
+            slow_print("\nYou close your eyes. Pretending to sleep. Sabrina follows your lead.")
+            time.sleep(0.5)
+            slow_print("The terrorists glance at your passports. 'Just civilians.'")
+            time.sleep(0.5)
+            slow_print("They move to the next row. An old man screams. A gunshot.")
+            
+            terror_alert += 5
+            morality -= 15
+            honor -= 20  # Cowardice costs honor
+            
+            if terror_alert > 60:
+                slow_print("\n⚠️ They return minutes later. 'This one lied about being civilian.'")
+                slow_print("The terrorist drags you to the front.")
+                slow_print("Sabrina grabs your hand. They push her away. She falls.")
+                wife_alive = False if random.random() > 0.5 else True
+            break
+            
+        else:
+            slow_print("[ERROR] Choose 1, 2, or 3.")
+    
+    show_stats()
+    time.sleep(2)
+    return
+
+def ending_cold_case():
+    print("\n" + "=" * 50)
+    slow_print("              ENDING: COLD CASE")
+    print("=" * 50)
+    slow_print("\nThe terrorists lose control. The plane spirals down.")
+    time.sleep(1)
+    slow_print("You hold Sabrina as alarms blare. Water everywhere.")
+    time.sleep(0.5)
+    slow_print("The black box is never found.")
+    time.sleep(0.5)
+    slow_print("Families wait at airports for days that turn to years.")
+    time.sleep(0.5)
+    slow_print("Flight 217 becomes a ghost story. A question without answer.")
+    time.sleep(1)
+    slow_print("\n[THE PLANE CRASHED. NO SURVIVORS.]")
+    if wife_alive:
+        slow_print("At least you died together.")
+    else:
+        slow_print("You died alone, holding her memory.")
+
+def ending_hero_tragedy():
+    print("\n" + "=" * 50)
+    slow_print("         ENDING: SAVED WIFE, LOST SOUL")
+    print("=" * 50)
+    slow_print("\nYou fight through the cabin. Gunfire everywhere.")
+    time.sleep(1)
+    slow_print("Sabrina survives. She's alive. She's crying.")
+    time.sleep(0.5)
+    slow_print("But behind you... 47 bodies. Men, women, children.")
+    time.sleep(0.5)
+    slow_print("The news calls you a hero. Your wife calls your name.")
+    time.sleep(0.5)
+    slow_print("But every night you see their faces.")
+    slow_print("Sabrina holds you. But something between you died on that plane.")
+    time.sleep(1)
+    slow_print("\n[YOU SAVED HER. BUT YOU KILLED MANY.]")
+    slow_print(f"Morality: {morality} | Honor: {honor}")
+    slow_print("Some debts cannot be repaid.")
+
+def ending_suicide():
+    print("\n" + "=" * 50)
+    slow_print("         ENDING: HER VOICE, THEN SILENCE")
+    print("=" * 50)
+    slow_print("\nSabrina's body is cold in your arms.")
+    time.sleep(1)
+    slow_print("The terrorists are dead. The plane is secure.")
+    time.sleep(0.5)
+    slow_print("But she's not breathing. She's not coming back.")
+    time.sleep(0.5)
+    slow_print("You find the pistol on the floor.")
+    time.sleep(0.5)
+    slow_print("Her last whisper was your name.")
+    slow_print("\nYou put the barrel to your temple.")
+    time.sleep(1)
+    slow_print("'I'm coming, Sabrina.'")
+    time.sleep(0.5)
+    slow_print("\n[ONE SHOT. TWO LIVES GONE.]")
+    slow_print("The cabin finds you both. Hands still touching.")
+
+def determine_ending():
+    global wife_alive, morality, honor
+    
+    print("\n" + "🔻" * 25)
+    slow_print("           FLIGHT 217 : FINAL MOMENTS")
+    print("🔻" * 25)
+    time.sleep(1)
+    
+    if not wife_alive:
+        ending_suicide()
+    elif morality <= 30 and wife_alive:
+        ending_hero_tragedy()
+    else:
+        ending_cold_case()
+
+# Full game integration
+def start_game():
+    global morality, honor, wife_alive, terror_alert
+    
+    # Reset stats
+    morality = 50
+    honor = 50
+    wife_alive = True
+    terror_alert = 0
+    
+    sabrina_emotion = 50  # From previous conversations
+    
+    # ... (insert the 4 conversations from previous response here)
+    
+    # Hijack happens
+    hijack_sequence(sabrina_emotion)
+    
+    # Determine ending based on choices
+    determine_ending()
+    
+    # Final message
+    print("\n" + "=" * 50)
+    slow_print("         THANK YOU FOR PLAYING")
+    slow_print("    Every choice costs. Every life matters.")
+    print("=" * 50)
+
+# Run the game
+if __name__ == "__main__":
+    start_game()
