@@ -21,7 +21,7 @@ Your conversations with Sabrina affect her emotions. Your actions during the hij
 **Three possible endings:**
 1. ❄️ **Cold Case** - The plane crashes. No answers. No survivors.
 2. 🩸 **Save Wife, Kill Many** - She lives. But at what cost?
-3. 💔 **Tragic Loss -** -  A devastating ending shaped by grief and consequence.
+3. 💔 **Tragic Loss** - A devastating ending shaped by grief and consequence.
 No ending is completely happy. No decision is completely right.
 
 ## How to run it
@@ -33,10 +33,7 @@ No ending is completely happy. No decision is completely right.
 1. Save the game code as `flight217.py`
 2. Open terminal / command prompt
 3. Navigate to the folder containing the file
-4. Run this command:
-
-```bash
-python flight217.py
+4. Run the command from code file.
 
 ## Features
 - Branching choices
