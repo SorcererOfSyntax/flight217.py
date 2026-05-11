@@ -21,8 +21,7 @@ Your conversations with Sabrina affect her emotions. Your actions during the hij
 **Three possible endings:**
 1. ❄️ **Cold Case** - The plane crashes. No answers. No survivors.
 2. 🩸 **Save Wife, Kill Many** - She lives. But at what cost?
-3. 💔 **Wife Death** - You lose her. Then yourself.
-
+3. 💔 **Tragic Loss -** -  A devastating ending shaped by grief and consequence.
 No ending is completely happy. No decision is completely right.
 
 ## How to run it
@@ -38,3 +37,17 @@ No ending is completely happy. No decision is completely right.
 
 ```bash
 python flight217.py
+
+## Features
+- Branching choices
+- Morality system
+- Multiple endings
+- Slow-print cinematic dialogue
+- Replayable paths
+
+
+## Planned Improvements
+- Better branching depth
+- Save system
+- Improved dialogue variety
+- Cleaner architecture
